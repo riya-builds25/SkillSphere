@@ -1,0 +1,195 @@
+1. What is CSS Box Model?
+
+Answer:
+The CSS Box Model is a concept that describes how every HTML element is represented as a rectangular box on a webpage.
+
+The CSS Box Model consists of four parts:
+
+Content – It contains the actual text, image, or other content.
+Padding – It is the space between the content and the border.
+Border – It surrounds the content and padding.
+Margin – It is the space outside the border and separates one element from another.
+
+The Box Model helps in controlling the size, spacing, and layout of elements on a webpage.
+
+2. What is Media Query? Explain.
+
+Answer:
+A Media Query is a CSS technique used to make a website responsive. It allows different CSS styles to be applied depending on the device or screen size.
+
+Media queries are commonly used for:
+
+Mobile phones
+Tablets
+Laptops
+Desktop computers
+
+They help a webpage adjust its layout according to the screen size.
+
+Example:
+If the screen width is small, the font size, images, columns, and other elements can be changed to make the website easier to view.
+
+In simple words:
+Media Query is used to make a website look properly on different screen sizes.
+
+3. What are the features of Bootstrap?
+
+Answer:
+Bootstrap is a popular front-end CSS framework used for creating responsive and attractive websites.
+
+Features of Bootstrap:
+Responsive Design – Websites automatically adjust according to screen size.
+Mobile-First Approach – It is designed to work well on mobile devices first.
+Grid System – Provides a 12-column grid system for creating layouts.
+Predefined Classes – Provides ready-made CSS classes.
+Ready-made Components – Includes buttons, cards, navigation bars, forms, alerts, etc.
+Easy to Use – It is simple and beginner-friendly.
+Cross-Browser Compatibility – Works with major web browsers.
+Consistent Design – Helps maintain a consistent appearance throughout a website.
+Responsive Utilities – Provides classes for controlling visibility, spacing, alignment, etc.
+4. Write an example of basic Grid Structure in Bootstrap.
+
+Answer:
+Bootstrap provides a grid system for designing webpage layouts.
+
+The Bootstrap grid system is based on 12 columns.
+
+The basic structure consists of:
+
+Container – Holds the main content.
+Row – Creates a horizontal row.
+Column – Divides the row into different sections.
+
+For example, a row can be divided into:
+
+3 equal columns → 4 + 4 + 4 = 12
+2 equal columns → 6 + 6 = 12
+4 equal columns → 3 + 3 + 3 + 3 = 12
+
+The Bootstrap grid makes it easier to create responsive layouts for different devices.
+
+5. What are CSS Selectors?
+
+Answer:
+CSS Selectors are used to select HTML elements that we want to style.
+
+They tell the browser which HTML elements should receive a particular CSS style.
+
+Types of CSS Selectors:
+Element Selector – Selects HTML elements based on their tag name.
+ID Selector – Selects an element using its unique ID.
+Class Selector – Selects elements having a particular class.
+Universal Selector – Selects all HTML elements.
+Grouping Selector – Applies the same style to multiple elements.
+Attribute Selector – Selects elements based on their attributes.
+
+In simple words:
+CSS selectors identify which HTML elements should be styled.
+
+6. What are CSS Backgrounds? List the properties.
+
+Answer:
+CSS Background properties are used to define and control the background appearance of an HTML element.
+
+Important CSS Background Properties:
+background-color – Sets the background color.
+background-image – Sets an image as the background.
+background-repeat – Controls whether the background image repeats.
+background-position – Specifies the position of the background image.
+background-size – Controls the size of the background image.
+background-attachment – Controls whether the background image scrolls with the page or remains fixed.
+background – Shorthand property used to set multiple background properties together.
+
+These properties help make webpages more attractive and visually appealing.
+
+7. How can we overlap elements in CSS?
+
+Answer:
+Elements can be overlapped in CSS by using positioning properties and controlling their stacking order.
+
+The position property can be used to place elements at specific locations. The z-index property controls which element appears in front of another element.
+
+If two elements occupy the same area, the element with a higher stacking order generally appears above the other.
+
+Main concepts used:
+position
+top
+left
+right
+bottom
+z-index
+
+In simple words:
+CSS allows elements to be placed on top of one another using positioning and stacking order.
+
+8. What are the different positioning properties in CSS?
+
+Answer:
+The CSS position property determines how an element is positioned on a webpage.
+
+There are five main positioning values:
+
+1. Static
+
+It is the default position of an element. The element appears in the normal flow of the webpage.
+
+2. Relative
+
+The element remains in the normal flow but can be moved relative to its original position.
+
+3. Absolute
+
+The element is removed from the normal document flow and positioned relative to its nearest positioned ancestor.
+
+4. Fixed
+
+The element is positioned relative to the browser window. It remains in the same position even when the page is scrolled.
+
+5. Sticky
+
+The element behaves like a relatively positioned element until a particular scrolling position is reached. After that, it sticks to a specified position.
+
+9. What is ECMAScript?
+
+Answer:
+ECMAScript is a standardized specification for scripting languages.
+
+It defines rules and features for scripting languages such as:
+
+Variables
+Functions
+Objects
+Classes
+Operators
+Data types
+Control statements
+
+JavaScript is the most popular implementation of ECMAScript.
+
+ECMAScript is maintained and standardized by ECMA International.
+
+In simple words:
+
+ECMAScript is the standard, while JavaScript is a programming language that follows that standard.
+
+10. What is the difference between var, let and const in JavaScript? Explain Temporal Dead Zone.
+
+Answer:
+
+var, let, and const are used to declare variables in JavaScript, but they have different characteristics.
+
+var
+It is function scoped.
+It can be redeclared.
+Its value can be changed.
+It is hoisted and initialized with undefined.
+let
+It is block scoped.
+It cannot be redeclared in the same block.
+Its value can be changed.
+It is hoisted but cannot be accessed before its declaration.
+const
+It is block scoped.
+It cannot be redeclared in the same block.
+Its value cannot be reassigned after declaration.
+It is also affected by the Temporal Dead Zone.
