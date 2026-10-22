@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Change Theme</title>
+</head>
+<body id="page">
+    <h2>Change Color Theme</h2>
+
+    <button onclick="changeColor('lightblue')">
+        Blue Theme
+    </button>
+
+    <button onclick="changeColor('lightgreen')">
+        Green Theme
+    </button>
+
+    <button onclick="changeColor('black')">
+        Dark Theme
+    </button>
+
+    <script>
+        function changeColor(color) {
+            document.getElementById("page").style.backgroundColor = color;
+
+            if (color == "black") {
+                document.getElementById("page").style.color = "white";
+            } else {
+                document.getElementById("page").style.color = "black";
+            }
+        }
+    </script>
+</body>
+</html>
