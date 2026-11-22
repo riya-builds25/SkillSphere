@@ -1,0 +1,196 @@
+Q1. What is a closure in JavaScript? Explain with a suitable example.
+
+A closure in JavaScript is a function that remembers the variables of its outer function even after the outer function has finished executing.
+Example:
+
+function outer() {
+    let count = 0;
+
+    function inner() {
+        count++;
+        console.log(count);
+    }
+    return inner;
+}
+let result = outer();
+result(); // 1
+result(); // 2
+result(); // 3
+
+The inner function can access the variable of the outer function. Even after the outer function finishes, the inner function remembers the value of count. This is called a closure.
+
+Q2. What is a Promise in JavaScript? Explain its different states.
+
+A Promise in JavaScript is an object used to handle asynchronous operations. It represents a value that may be available now, later, or never.
+A Promise has three states:
+1. Pending: The operation is still in progress.
+2. Fulfilled: The operation is completed successfully.
+3. Rejected: The operation fails due to an error.
+Example:
+
+let myPromise = new Promise((resolve, reject) => {
+    let success = true;
+    if (success) {
+        resolve("Operation Successful");
+    } else {
+        reject("Operation Failed");
+    }
+});
+myPromise.then((result) => {
+    console.log(result);
+}).catch((error) => {
+    console.log(error);
+});
+
+Q3. What is async/await in JavaScript? How does it simplify working with Promises?
+
+Async and await are keywords in JavaScript used to handle asynchronous operations easily.
+1. Async: It is used before a function to make it return a Promise.
+2. Await: It is used inside an async function to wait for a Promise to complete.
+They make asynchronous code easier to read and understand.
+Example:
+
+function getData() {
+    return new Promise((resolve) => {
+        resolve("Data received successfully");
+    });
+}
+async function showData() {
+    let result = await getData();
+    console.log(result);
+}
+showData();
+
+The async keyword makes the function asynchronous. The await keyword waits for the Promise to complete. It makes the code look simple and similar to normal synchronous code.
+
+Q4. What is the Global Execution Context in JavaScript?
+
+The Global Execution Context (GEC) is the default environment in which JavaScript code starts executing. It is created automatically when a JavaScript program starts.
+The Global Execution Context has two main phases:
+1. Memory Creation Phase: JavaScript allocates memory for variables and functions.
+2. Code Execution Phase: JavaScript executes the code line by line and assigns values to variables.
+Example:
+
+var a = 10;
+function greet() {
+    console.log("Hello");
+}
+greet();
+
+First, the Global Execution Context is created. Memory is allocated for variable a and function greet. Then the code is executed line by line. The function greet() is called and prints Hello.
+
+Q5. What is currying in JavaScript? Explain with an example.
+
+Currying is a technique in JavaScript in which a function with multiple arguments is converted into a series of functions, where each function takes one argument at a time.
+Example:
+
+function add(a) {
+    return function(b) {
+        return function(c) {
+            return a + b + c;
+        };
+    };
+}
+console.log(add(2)(3)(4)); // 9
+
+The first function takes argument a. The second function takes argument b. The third function takes argument c. Finally, all three values are added and the result is 9.
+
+Q6. What is jQuery, and what is its significance in web development?
+
+jQuery is a fast, small and lightweight JavaScript library. It makes HTML document manipulation, event handling, animations and AJAX operations easier.
+Significance of jQuery:
+1. It reduces the amount of JavaScript code.
+2. It makes HTML element selection easy.
+3. It simplifies event handling.
+4. It provides built-in animation effects.
+5. It makes AJAX operations easier.
+6. It supports different web browsers.
+Example:
+
+$(document).ready(function() {
+    $("button").click(function() {
+        $("p").hide();
+    });
+});
+
+When the user clicks the button, all paragraph elements are hidden.
+
+Q7. What is a component in React? Explain its types.
+
+A component in React is a reusable and independent part of the user interface. It helps divide a large application into smaller parts.
+There are two main types of components:
+1. Functional Components:
+Functional components are JavaScript functions that return JSX. They are simple and commonly used in modern React applications.
+Example:
+
+function Welcome() {
+    return <h1>Hello World</h1>;
+}
+
+2. Class Components:
+Class components are created using JavaScript classes. They extend the React.Component class and use a render() method to return JSX.
+Example:
+
+class Welcome extends React.Component {
+    render() {
+        return <h1>Hello World</h1>;
+    }
+}
+
+Advantages of Components:
+1. They make code reusable.
+2. They make applications easy to manage.
+3. They improve code organization.
+4. They make development faster.
+
+Q8. What is the Virtual DOM? How does it improve application performance?
+
+The Virtual DOM (Document Object Model) is a lightweight copy of the real DOM. It is used by React to manage changes in the user interface efficiently.
+How it improves performance:
+1. React creates a Virtual DOM to represent the user interface.
+2. When changes occur, React creates an updated Virtual DOM.
+3. It compares the updated Virtual DOM with the previous one. This process is called Diffing.
+4. React identifies only the changed parts.
+5. It updates only the required parts of the real DOM.
+
+This reduces unnecessary DOM updates and improves application performance.
+
+Q9. What is JSX? Why can browsers not understand it directly?
+
+JSX stands for JavaScript XML. It is a syntax extension of JavaScript used in React to write HTML-like code inside JavaScript.
+It makes the code easier to read and understand.
+Example:
+
+function App() {
+    return <h1>Hello React</h1>;
+}
+
+Why browsers cannot understand JSX directly:
+1. Browsers understand JavaScript, HTML and CSS.
+2. JSX is not directly understood by browsers.
+3. It must be converted into regular JavaScript using tools like Babel.
+4. After conversion, the browser can execute the JavaScript code.
+
+Q10. What are props in React? Are they mutable or immutable?
+
+Props stands for properties. They are used to pass data from a parent component to a child component in React.
+Props help components share information and make them reusable.
+Example:
+
+function Student(props) {
+    return <h1>Hello {props.name}</h1>;
+}
+
+function App() {
+    return <Student name="Riya" />;
+}
+
+Output:
+Hello Riya
+
+Are props mutable or immutable?
+Props are immutable, which means they cannot be changed by the child component.
+
+1. Props are passed from parent to child.
+2. Child components can read props but cannot modify them.
+3. If the data needs to change, the parent component can pass updated props.
